@@ -1,0 +1,14 @@
+@import './reset.scss';
+@import './custom.scss';
+@import '../fonts/iconfont/iconfont.css';
+
+table{
+    tbody{
+        div.cell.el-tooltip{
+            >*{
+                overflow: inherit;
+                text-overflow: inherit;
+            }
+        }
+    }
+}
