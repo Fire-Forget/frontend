@@ -15,7 +15,7 @@
     <div id="root">
       <style>
         /* loading 动画 */
-        @keyframes landing {
+        /* @keyframes landing {
           0% {
             transform: scale(1)
           }
@@ -24,6 +24,31 @@
           }
           100% {
             transform: scale(1)
+          }
+        } */
+        @keyframes k-loading{
+          0%{
+            transform: translateY(0);
+            opacity: 1;
+          }
+          30%{
+            transform: translateY(0);
+            opacity: .3;
+          }
+          50%{
+            transform: translateY(-20px);
+            opacity: .8;
+          }
+          70%{
+            transform: translateY(3px);
+            opacity: .8;
+          }
+          85%{
+            transform: translateY(-3px);
+          }
+          100%{
+            transform: translateY(0);
+            opacity: 1;
           }
         }
 

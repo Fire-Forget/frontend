@@ -5,26 +5,32 @@
     {
       "id":1,
       "name":"首页",
-      "icon":"",
+      "icon":"home",
       "url":"/home",
       "children":[]
     },{
       "id":2,
       "name":"德玛西亚",
-      "icon":"",
+      "icon":"demacia",
       "url":"/demacia",
       "children":[]
     },{
       "id":3,
       "name":"诺克萨斯",
-      "icon":"",
+      "icon":"noxus",
       "url":"/noxus",
       "children":[]
     },{
       "id":4,
       "name":"暗影岛",
-      "icon":"",
+      "icon":"shadow",
       "url":"/shadow",
+      "children":[]
+    },{
+      "id":5,
+      "name":"其他",
+      "icon":"temp",
+      "url":"/temp",
       "children":[]
     }
   ]

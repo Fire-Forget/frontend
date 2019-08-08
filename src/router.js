@@ -7,7 +7,7 @@ import Tip404 from './pages/error/404';
 import MainLayout from './layout/mainLayout';
 //pages
 import Home from './pages/home'
-
+import Temp from './pages/temp'
 
 Vue.use(Router)
 const router = new Router({
@@ -20,6 +20,11 @@ const router = new Router({
                 path:'home',
                 name:'home',
                 component:Home
+            },
+            {
+                path:'temp',
+                name:'temp',
+                component:Temp
             }
         ]
     },

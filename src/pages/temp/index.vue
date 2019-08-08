@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <img :src="Logo">
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -31,10 +32,14 @@
 </template>
 
 <script>
+import Logo from "@/public/assets/img/logo.png";
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  name: 'temp',
+  data(){
+    return {
+      Logo,
+      msg:"Hello World"
+    }
   }
 }
 </script>

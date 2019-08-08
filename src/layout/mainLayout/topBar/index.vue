@@ -17,7 +17,8 @@
         <el-menu-item 
         v-for="item in topBar" 
         :key="item.id" 
-        :index="item.url.match(/\/\w*/g)[0]">
+        :index="item.url.match(/\/\w*/g)[0]"
+        @click="redirect(item.url)">
         <!-- 上面的match 取/xxx/yyy中的/xxx -->
             {{item.name}}
         </el-menu-item>
@@ -35,12 +36,27 @@ export default {
     return {
       Logo,
       title:'Welcome to Web of Fire & Forget',
-      activeIndex:'',
+      
     }
   },
   // computed:{
   //   activeIndex: ()=> this.$route.path.match(/\/\w*/g)[0]
-  // }
+  // },
+  computed: {
+    activeIndex: function() {
+      let routerArr = this.$route.path.match(/\/\w*/g);
+      return routerArr[0];
+    }
+  },
+  methods:{
+    redirect(path){
+      if (path) {
+        this.$router.push(path);
+      } else {
+        console.log("无效url", path);
+      }
+    }
+  }
 }
 </script>
 
