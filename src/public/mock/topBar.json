@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "message": "执行成功~~",
+  "data": [
+    {
+      "id":1,
+      "name":"首页",
+      "icon":"",
+      "url":"/home",
+      "children":[]
+    },{
+      "id":2,
+      "name":"德玛西亚",
+      "icon":"",
+      "url":"/demacia",
+      "children":[]
+    },{
+      "id":3,
+      "name":"诺克萨斯",
+      "icon":"",
+      "url":"/noxus",
+      "children":[]
+    },{
+      "id":4,
+      "name":"暗影岛",
+      "icon":"",
+      "url":"/shadow",
+      "children":[]
+    }
+  ]
+}

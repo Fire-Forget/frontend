@@ -1,15 +1,15 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Tip404 from './pages/error/404';
 
+//引入页面
+import Tip404 from './pages/error/404';
 //layout
 import MainLayout from './layout/mainLayout';
-
 //pages
 import Home from './pages/home'
 
-Vue.use(Router)
 
+Vue.use(Router)
 const router = new Router({
     mode:"history",
     routes:[{
@@ -34,6 +34,5 @@ const router = new Router({
     }
 ],
 })
-
 
 export default router;

@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-header class="no-padding">
-      <top-bar/>
+      <top-bar :topBar="topBar"/>
     </el-header>
     <el-main>
       <router-view></router-view>
@@ -11,6 +11,7 @@
 
 <script>
 import TopBar from './topBar'
+import { mapState } from 'vuex'
 export default {
   components:{
     'top-bar':TopBar
@@ -21,7 +22,13 @@ export default {
     };
   },
 
+  beforeCreate(){
+    this.$store.dispatch('getTopBar');
+  },
 
+  computed: mapState({
+    topBar: state => state.global.topBar,
+  }),
 }
 </script>
 
