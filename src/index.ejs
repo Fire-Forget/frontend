@@ -1,145 +1,74 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="FF" content="Fire&Forget">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="FF" content="Fire&Forget" />
     <title>你XX</title>
-    <link rel="Shortcut Icon" href="/assets/imgs/favicon.ico" type="image/x-icon">
+    <link
+      rel="Shortcut Icon"
+      href="/assets/imgs/favicon.ico"
+      type="image/x-icon"
+    />
     <script src="<%= htmlWebpackPlugin.options.assets.config_js %>"></script>
     <!-- <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_878391_z04vo2f0er9.css" /> -->
   </head>
   <body>
     <div id="root">
       <style>
-        /* loading 动画 */
-        /* @keyframes landing {
-          0% {
-            transform: scale(1)
-          }
-          50% {
-            transform: scale(1.2)
-          }
-          100% {
-            transform: scale(1)
-          }
-        } */
-        @keyframes k-loading{
-          0%{
-            transform: translateY(0);
-            opacity: 1;
-          }
-          30%{
-            transform: translateY(0);
-            opacity: .3;
-          }
-          50%{
-            transform: translateY(-20px);
-            opacity: .8;
-          }
-          70%{
-            transform: translateY(3px);
-            opacity: .8;
-          }
-          85%{
-            transform: translateY(-3px);
-          }
-          100%{
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
-
         .landing {
+          background-color: cornflowerblue;
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
-          background: #2F3942;
         }
 
-        .landing .content {
+        .content {
           position: absolute;
           top: 50%;
           left: 50%;
+					margin: -1rem 0 0 -3rem;
         }
 
-        .spinner {
-          margin-top: -20px;
-          margin-left: -30px;
-          width: 60px;
-          height: 40px;
-          text-align: center;
-          font-size: 10px;
-        }
-
-        .spinner>div {
-          background-color: #2491f7;
-          height: 100%;
-          width: 6px;
+        .circle {
+          background-color: #fff;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
           display: inline-block;
-          margin: 0 1px;
-
-          -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-          animation: sk-stretchdelay 1.2s infinite ease-in-out;
         }
 
-        .spinner .rect2 {
-          -webkit-animation-delay: -1.1s;
-          animation-delay: -1.1s;
-        }
+				.action1 {
+					animation: circle-effect 1s 0s infinite linear;
+				}
+				.action2 {
+					animation: circle-effect 1s -0.8s infinite linear;
+				}
+				.action3 {
+					animation: circle-effect 1s -0.6s infinite linear;
+				}
 
-        .spinner .rect3 {
-          -webkit-animation-delay: -1.0s;
-          animation-delay: -1.0s;
-        }
-
-        .spinner .rect4 {
-          -webkit-animation-delay: -0.9s;
-          animation-delay: -0.9s;
-        }
-
-        .spinner .rect5 {
-          -webkit-animation-delay: -0.8s;
-          animation-delay: -0.8s;
-        }
-
-        @-webkit-keyframes sk-stretchdelay {
-          0%,
-          40%,
-          100% {
-            -webkit-transform: scaleY(0.4)
-          }
-          20% {
-            -webkit-transform: scaleY(1.0)
-          }
-        }
-
-        @keyframes sk-stretchdelay {
-          0%,
-          40%,
-          100% {
-            transform: scaleY(0.4);
-            -webkit-transform: scaleY(0.4);
-          }
-          20% {
-            transform: scaleY(1.0);
-            -webkit-transform: scaleY(1.0);
-          }
+        @keyframes circle-effect {
+          0%{
+						transform: scale(.1,.1);
+					}
+					50%{
+						transform: scale(1,1);
+					}
+					100% {
+						transform: scale(.1,.1);
+					}
         }
       </style>
       <div class="landing">
         <div class="content">
-          <div class="spinner">
-            <div class="rect1"></div>
-            <div class="rect2"></div>
-            <div class="rect3"></div>
-            <div class="rect4"></div>
-            <div class="rect5"></div>
-          </div>
+					<div class="circle action1"></div>
+					<div class="circle action2"></div>
+					<div class="circle action3"></div>
         </div>
       </div>
     </div>
