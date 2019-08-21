@@ -1,8 +1,11 @@
 # Vue问题自梳理
 
 ## watch和computed
-参考：[https://segmentfault.com/a/1190000012948175#articleHeader1](https://segmentfault.com/a/1190000012948175#articleHeader1)
+参考：https://segmentfault.com/a/1190000012948175#articleHeader1
 
+
+# created和mounted
+参考：https://blog.csdn.net/xdnloveme/article/details/78035065
 # layout
 
 ## Project setup
